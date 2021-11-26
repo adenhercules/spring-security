@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:sec="http://www.springframework.org/security/facelets/tags">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    
+    <h1>Sistemas Unirbar</h1>
+Usuário logado f(request. remoteUser)
+<br/>
+<h:form>
+    <sec:ifAnyGranted roles="ROLE_ADMINISTRADOR">
+        <h:commandLink action="/Admin/principal" title="Administrativo">
+            <h:graphicImage library="imagens" name="administrativol6.png" />
+        </h:commandLink>
+     </sec:ifAnyGranted>
+</h:form>
+    </body>
+</html>
